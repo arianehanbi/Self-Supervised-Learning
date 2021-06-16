@@ -63,7 +63,7 @@ To reduce overfitting and overconfidence problems, I implemented the label smoot
 
 
 
-# In conclusion, 
+# Conclusion
 My model achieved `83.4%` accuracy on the validation dataset by using fine-tuned features. The accuracy difference between using fixed features and finetuned features can be seen as follows:
 
 
