@@ -1,6 +1,6 @@
 # Self-Supervised Learning for SVHN
 
-I made two types of experiments to learn features in both an unsupervised and a self-supervised manner. In the first trial, I trained a GAN, and then transfer the features of the discriminator (see Appendix). In the second experiment, I trained a self-supervised network that generates free rotating labels by rotating images from the given unlabeled data. I finally chose a rotation prediction method due to the limitation in improving the performance of the GAN model. The detailed implementation I made is as follows: 
+I explored techniques to leverage large amounts of unlabelled data to learn image representations. Specifically, I made two types of experiments to learn features in both an unsupervised and a self-supervised manner. In the first trial, I trained a GAN, and then transfer the features of the discriminator (see GAN file). In the second experiment, I trained a self-supervised network that generates free rotating labels by rotating images from the given unlabeled data. I finally chose a rotation prediction method due to the limitation in improving the performance of the GAN model. The detailed implementation I made is as follows: 
 
 <br>
 
@@ -14,7 +14,7 @@ I made two types of experiments to learn features in both an unsupervised and a 
 
 - Designed Architecture
 
-  I used a convolutional neural network consisting of four convolutional layers and one classification layer (with the number of filter 64). And the backbone is designed with convolutional layers consisting of normalization layers and max-pooling layers which is similar to the previous assignment's network, and the head is made up with one convolutional layer.
+  I used a convolutional neural network consisting of four convolutional layers and one classification layer (with the number of filter 64). The backbone is designed with convolutional layers consisting of normalization layers and max-pooling layers which is similar to the previous assignment's network, and the head is made up with one convolutional layer.
 
 - Transfer Learning (Down stream task)
   
@@ -64,7 +64,7 @@ To reduce overfitting and overconfidence problems, I implemented the label smoot
 
 
 # In conclusion, 
-my model achieved `83.4%` accuracy on the validation dataset by using fine-tuned features. The accuracy difference between using fixed features and finetuned features can be seen as follows:
+My model achieved `83.4%` accuracy on the validation dataset by using fine-tuned features. The accuracy difference between using fixed features and finetuned features can be seen as follows:
 
 
 ![final_result](https://user-images.githubusercontent.com/37695060/122180183-7b091900-ce88-11eb-9a85-a62a932f20d8.png)
